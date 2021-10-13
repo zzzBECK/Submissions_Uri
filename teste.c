@@ -1,28 +1,14 @@
 #include <stdio.h>
+#include <string.h>
+int main() {
+   char str1[100] = "This is ", str2[] = "programiz.com";
 
-int main()
-{
-    int m[12][12], i, j;
+   // concatenates str1 and str2
+   // the resultant string is stored in str1.
+   strcat(str1, str2);
 
-    for (i = 0; i < 12; i++)
-    {
-        for (j = 0; j < 12; j++)
-        {
-            scanf("%d", &m[i][j]);
-        }
-    }
+   puts(str1);
+   puts(str2);
 
-    for (i = 0; i < 12; i++)
-    {
-        for (j = 0; j < 12; j++)
-        {
-            if (j == 11 - i)
-                printf("%d ", m[i][j]);
-        }
-        printf("\n");
-    }
-
-    
-
-    return 0;
+   return 0;
 }
