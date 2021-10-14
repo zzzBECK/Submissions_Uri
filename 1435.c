@@ -2,13 +2,22 @@
 
 int main()
 {
-    int n;
+    int n = 1, i, j;
 
-    scanf("%d", &n);
+    
 
     while (n != 0)
     {
-        n = 0;
+        scanf("%d", &n);
+
+        for (i = 0; i < n; i++)
+        {
+            for (j = 0; j < n; j++)
+            {
+                printf("%d", 1);
+            }
+            printf("\n");
+        }
     }
 
     return 0;
