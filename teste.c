@@ -1,14 +1,29 @@
 #include <stdio.h>
 #include <string.h>
-int main() {
-   char str1[100] = "This is ", str2[] = "programiz.com";
 
-   // concatenates str1 and str2
-   // the resultant string is stored in str1.
-   strcat(str1, str2);
 
-   puts(str1);
-   puts(str2);
+int main()
+{
+   int teste, i;
+   char op;
+   char malditos_cromossomos[3];
 
+   scanf("%d", &teste);
+
+   for (i = 0; i < teste; i++)
+   {
+      scanf("%s", &malditos_cromossomos);
+      op = malditos_cromossomos[1];
+
+      if(malditos_cromossomos[0] == malditos_cromossomos[2])
+         printf("%d\n", (malditos_cromossomos[0] - '0') * (malditos_cromossomos[2] - '0'));
+
+      else if(op >= 65 && op <= 90)
+         printf("%d\n", (malditos_cromossomos[2] - '0') - (malditos_cromossomos[0] - '0'));
+
+      else if(op >= 97 && op <= 122)
+         printf("%d\n", (malditos_cromossomos[0] - '0') + (malditos_cromossomos[2] - '0'));
+   }
+   
    return 0;
 }

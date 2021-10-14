@@ -18,13 +18,8 @@ int main()
         for (i= 0; i < strlen(str); i++)
         {
             if (str[i] - qtd_posicoes < 65)
-            {
-                str[i] -= 90 - qtd_posicoes;
-            }
-            else if (str[i] - qtd_posicoes > 90)
-            {
-                str[i] -= 65 - qtd_posicoes;
-            }
+                str[i] += 26 - qtd_posicoes;
+                
             else
                 str[i] -= qtd_posicoes;
         }
